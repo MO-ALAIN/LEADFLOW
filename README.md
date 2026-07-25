@@ -189,6 +189,10 @@ appropriate for a training demo, but submitted leads can reset after inactivity
 or redeployment. For permanent production data, switch Prisma to PostgreSQL and
 set `DATABASE_URL` to a managed provider such as Neon.
 
+The Blueprint explicitly installs development dependencies during its build
+because TypeScript, Vite, Prisma CLI, and `tsx` are required to compile and
+initialize this monorepo even though the running service uses production mode.
+
 Before submitting, verify:
 
 ```bash
