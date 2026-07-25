@@ -4,6 +4,18 @@ A full-stack lead-management platform for small sales teams. It includes a publi
 lead-capture page, an authenticated workspace, admin/member permissions, lead
 assignment, a status pipeline, timestamped notes, and an activity trail.
 
+## Live demo
+
+Application: [https://leadflow-alain.onrender.com](https://leadflow-alain.onrender.com)
+
+| Role | Email | Password |
+|---|---|---|
+| Admin | `admin@leadflow.dev` | `DemoPass123!` |
+| Member | `member@leadflow.dev` | `DemoPass123!` |
+
+The free Render service can take about one minute to wake after a period of
+inactivity.
+
 ## Architecture
 
 ```text
