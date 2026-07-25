@@ -7,4 +7,5 @@ dist/
 *.log
 *.corrupt-backup.json
 coverage/
+*.tsbuildinfo
 .DS_Store
