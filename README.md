@@ -172,11 +172,28 @@ npm run build
 
 ## Production checklist
 
-1. Use a managed PostgreSQL database and change Prisma's datasource provider to
-   `postgresql`.
-2. Set a random 32+ character `JWT_SECRET`.
-3. Set `WEB_ORIGIN` and `VITE_API_URL` to the deployed HTTPS URLs.
-4. Run migrations and seed only the intended demo accounts.
-5. Build, run tests, and verify both roles before submitting.
+## Deploy on Render
+
+The included `render.yaml` deploys the React frontend and Express API together
+as one free Render web service:
+
+1. Open [Render Blueprints](https://dashboard.render.com/blueprints).
+2. Connect this GitHub repository.
+3. Select the `main` branch and approve the `render.yaml` configuration.
+4. Wait for the build and health check to pass.
+5. Open the generated `onrender.com` URL and test both demo accounts.
+
+Render generates `JWT_SECRET` securely. The free service uses an ephemeral
+SQLite database that is recreated and seeded when the service restarts. This is
+appropriate for a training demo, but submitted leads can reset after inactivity
+or redeployment. For permanent production data, switch Prisma to PostgreSQL and
+set `DATABASE_URL` to a managed provider such as Neon.
+
+Before submitting, verify:
+
+```bash
+npm test
+npm run build
+```
 
 Built for Digital Heroes Training Task — [digitalheroesco.com](https://digitalheroesco.com)

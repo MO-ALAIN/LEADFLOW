@@ -1,6 +1,6 @@
 import { app } from "./app.js";
 import { config } from "./config.js";
 
-app.listen(config.PORT, () => {
+app.listen(config.PORT, "0.0.0.0", () => {
   console.log(`LeadFlow API listening on http://localhost:${config.PORT}`);
 });

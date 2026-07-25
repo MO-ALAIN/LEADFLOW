@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w @leadflow/api\" \"npm run dev -w @leadflow/web\"",
     "build": "npm run build -w @leadflow/api && npm run build -w @leadflow/web",
+    "start": "npm run db:push -w @leadflow/api && npm run db:seed -w @leadflow/api && npm run start -w @leadflow/api",
     "test": "npm run test -w @leadflow/api",
     "db:generate": "npm run db:generate -w @leadflow/api",
     "db:migrate": "npm run db:migrate -w @leadflow/api",
